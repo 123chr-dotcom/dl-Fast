@@ -1,2 +1,28 @@
 # dl-Fast
-基于控制台的快速安装包管理工具
+dl wx.exe-win-x64
+dl wx.exe-win-x32
+dl wx-input.exe-win
+dl qq.exe-win-x32
+dl qq.exe-win-arm
+dl qq.exe-win-old
+dl everything_setup.exe-win-x86
+dl everything_setup.exe-win-x64
+dl everything_Lite_setup.exe-win-x86
+dl everything_Lite_setup.exe-win-x64
+dl everything_setup.msi-win-x86"
+dl everything_setup.msi-win-x64"
+dl everything_Lite_setup.msi-win
+dl everything_Lite_setup.msi-win
+dl pan.baidu.exe-win
+dl kuake.pan.exe-win
+dl kuake.exe-win
+dl thunder.pan.exe-win
+dl thunder.video.new.exe-win-x64
+dl thunder.video.old.exe-win-x86
+dl ali.pan.exe-win
+dl baidu.pan.enterprise.exe-win
+dl baidu.fanyi.exe-win
+dl baidu.input.exe-win
+dl baidu.input.f five.exe-win
+dl 360safe.exe-win
+dl 360safe.fast.exe-windl 
