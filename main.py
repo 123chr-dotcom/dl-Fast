@@ -104,7 +104,8 @@ def main():
                     "360DesktopLite.exe-win": ('360_desktop_lite', '360DesktopLite_zm000001.exe'),
                     "360suda.exe-win": ('360_suda', 'SudaSetup.exe'),
                     "360game.exe-win": ('360_game', '360game_setup.exe'),
-                    "360safebox.exe-win": ('360_safebox', 'Safebox_setup_6.0.0.1090.exe')
+                    "360safebox.exe-win": ('360_safebox', 'Safebox_setup_6.0.0.1090.exe'),
+                    "360suda.caplayer.exe-win": ('360_suda_caplayer', 'SudaCaplayerSetup_360gw.exe')
                 }
 
                 if cmd in command_map:
