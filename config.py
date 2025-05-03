@@ -36,5 +36,7 @@ DOWNLOAD_URLS = {
     '360_se': 'https://dl.360safe.com/se/360se_setup.exe',
     '360_pic': 'https://down.360safe.com/pic360/pic360Setup.exe',
     '360_zip': 'https://sfdl.360safe.com/360zip_setup.exe',
-    '360_drvmgr': 'https://dl.360safe.com/drvmgr/jituan__360DrvMgrInstaller_beta.exe'
+    '360_drvmgr': 'https://dl.360safe.com/drvmgr/jituan__360DrvMgrInstaller_beta.exe',
+    '360_desktop_lite': 'https://down.360safe.com/DesktopLite/360DesktopLite_zm000001.exe',
+    '360_suda': 'https://down.360safe.com/Suda/SudaSetup.exe'
 }

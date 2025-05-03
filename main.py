@@ -100,7 +100,9 @@ def main():
                     "360se.exe-win": ('360_se', '360se_setup.exe'),
                     "360pic.exe-win": ('360_pic', 'pic360Setup.exe'),
                     "360zip.exe-win": ('360_zip', '360zip_setup.exe'),
-                    "360DrvMgrInstaller.exe-win": ('360_drvmgr', '360DrvMgrInstaller_beta.exe')
+                    "360DrvMgrInstaller.exe-win": ('360_drvmgr', '360DrvMgrInstaller_beta.exe'),
+                    "360DesktopLite.exe-win": ('360_desktop_lite', '360DesktopLite_zm000001.exe'),
+                    "360suda.exe-win": ('360_suda', 'SudaSetup.exe')
                 }
 
                 if cmd in command_map:
