@@ -20,5 +20,8 @@ DOWNLOAD_URLS = {
     'everything_lite_msi_x64': 'https://www.voidtools.com/Everything-1.4.1.1026.x64.Lite.msi',
     'baidu_netdisk': 'https://9d93c7-1956185602.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.55.1.101.exe',
     'quark_pan': 'https://pdds-cdn-pc.quark.cn/93-4/stfile/2504/74f925164a7c59f71257eceaaaa53cf8/QuarkPC_V4.0.0.316_windows_pf5001_%28zh-cn%29_qkonequarkcloud_999_%28Build250428153217%29.exe?auth_key=1746866228-0-0-bdeef7dfe78a343098750caf7197ab6e&amp;SESSID=fdfbf70ea14be29541641ad2e9376744&amp;ext=uc.exe',
-    'quark_browser': 'https://umcdn.quark.cn/download/37212/quarkpc/pcquark@homepage_oficial/QuarkPC_V2.6.5.320_pc_pf30002_(zh-cn)_release_(Build2176623-250429144044-x64).exe'
+    'quark_browser': 'https://umcdn.quark.cn/download/37212/quarkpc/pcquark@homepage_oficial/QuarkPC_V2.6.5.320_pc_pf30002_(zh-cn)_release_(Build2176623-250429144044-x64).exe',
+    'thunder': 'https://down.sandai.net/thunder11/XunLeiWebSetup12.1.6.2780gw.exe',
+    'thunder_video_new': 'https://xmp.down.sandai.net/xmp/XMPSetup7.0.3.92xmpgw.exe',
+    'thunder_video_old': 'https://xmp.down.sandai.net/xmp/XMPSetup6.2.6.622xmpgw.exe'
 }

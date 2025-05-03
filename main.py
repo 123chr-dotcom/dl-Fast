@@ -117,8 +117,17 @@ def main():
                 elif cmd == "kuake.exe-win":
                     url = DOWNLOAD_URLS['quark_browser']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QuarkPC_V2.6.5.320.exe')
+                elif cmd == "thunder.pan.exe-win":
+                    url = DOWNLOAD_URLS['thunder']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XunLeiWebSetup12.1.6.2780gw.exe')
+                elif cmd == "thunder.video.new.exe-win-x64":
+                    url = DOWNLOAD_URLS['thunder_video_new']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XMPSetup7.0.3.92xmpgw.exe')
+                elif cmd == "thunder.video.old.exe-win-x86":
+                    url = DOWNLOAD_URLS['thunder_video_old']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XMPSetup6.2.6.622xmpgw.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, dl thunder.pan.exe-win, dl thunder.video.new.exe-win-x64, dl thunder.video.old.exe-win-x86, exit")
                     continue
                     
                 try:
