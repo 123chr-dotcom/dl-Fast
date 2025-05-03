@@ -105,7 +105,13 @@ def main():
                     "360suda.exe-win": ('360_suda', 'SudaSetup.exe'),
                     "360game.exe-win": ('360_game', '360game_setup.exe'),
                     "360safebox.exe-win": ('360_safebox', 'Safebox_setup_6.0.0.1090.exe'),
-                    "360suda.caplayer.exe-win": ('360_suda_caplayer', 'SudaCaplayerSetup_360gw.exe')
+                    "360suda.caplayer.exe-win": ('360_suda_caplayer', 'SudaCaplayerSetup_360gw.exe'),
+                    "360c0mpkill.exe-win": ('360_compkill', '360c0mpkill_5.1.64.1284-0423.zip'),
+                    "360DiskPart.exe-win": ('360_diskpart', 'DiskPartSetup_360gwxz.exe'),
+                    "360CleanPro.exe-win": ('360_cleanpro', 'SysCleanProSetup_swzs.exe'),
+                    "360yun.exe-win": ('360_yun', '360eyun_setup_4.0.1.1370.exe'),
+                    "QuickMediaEditor.exe-win": ('360_quickmedia', 'QuickMediaEditor_domain.exe'),
+                    "360hb.exe-win": ('360_hb', '360hb4.0.414.0__1003__.exe')
                 }
 
                 if cmd in command_map:

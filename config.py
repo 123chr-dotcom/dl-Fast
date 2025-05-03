@@ -41,5 +41,11 @@ DOWNLOAD_URLS = {
     '360_suda': 'https://down.360safe.com/Suda/SudaSetup.exe',
     '360_game': 'https://down.360safe.com/360game/360game_setup.exe',
     '360_safebox': 'https://dl.360safe.com/safebox/Safebox_setup_6.0.0.1090.exe',
-    '360_suda_caplayer': 'https://down.360safe.com/Caplayer/SudaCaplayerSetup_360gw.exe'
+    '360_suda_caplayer': 'https://down.360safe.com/Caplayer/SudaCaplayerSetup_360gw.exe',
+    '360_compkill': 'https://dl.360safe.com/360c0mpkill_5.1.64.1284-0423.zip',
+    '360_diskpart': 'https://down.360safe.com/DiskPart/DiskPartSetup_360gwxz.exe',
+    '360_cleanpro': 'https://sfdw.360safe.com/CleanPro/SysCleanProSetup_swzs.exe',
+    '360_yun': 'https://down.360safe.com/360eyun/360eyun_setup_4.0.1.1370.exe',
+    '360_quickmedia': 'https://down.360safe.com/se/QuickMediaEditor_domain.exe',
+    '360_hb': 'https://sedl.360tpcdn.com/se/360hb4.0.414.0__1003__.exe'
 }
