@@ -75,8 +75,17 @@ def main():
                 elif cmd == "wx-input.exe-win":
                     url = DOWNLOAD_URLS['input']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatInput.exe')
+                elif cmd == "qq.exe-win-x32":
+                    url = DOWNLOAD_URLS['qq_x32']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ_9.9.19_250429_x86_01.exe')
+                elif cmd == "qq.exe-win-arm":
+                    url = DOWNLOAD_URLS['qq_arm']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ_9.9.19_250429_arm64_01.exe')
+                elif cmd == "qq.exe-win-old":
+                    url = DOWNLOAD_URLS['qq_old']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ9.7.23.29406.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, exit")
                     continue
                     
                 try:
