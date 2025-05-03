@@ -9,10 +9,49 @@ import traceback
 from download import download_file
 from config import DOWNLOAD_URLS
 
+import logging
+import os
+from pathlib import Path
+
+def setup_logging():
+    """配置日志记录"""
+    log_dir = Path(os.getenv('TEMP', '.')) / 'dlFast_logs'
+    log_dir.mkdir(exist_ok=True)
+    log_file = log_dir / 'dlFast.log'
+    
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+
 def main():
     """主程序入口"""
     try:
+        setup_logging()
+        logging.info("="*50)
+        logging.info("程序启动，开始初始化...")
+        
+        # 检查关键模块导入
+        try:
+            import requests
+            import tqdm
+            logging.info("关键模块导入成功")
+        except ImportError as e:
+            logging.error(f"模块导入失败: {str(e)}")
+            raise
+            
+        logging.info("初始化完成，准备进入主循环")
+        
+        # 添加启动暂停
+        if sys.platform == "win32":
+            os.system("title dlFast 下载工具")
+            
         print("dlFast 下载工具 (输入exit退出)")
+        logging.info("程序界面已显示")
         
         while True:
             try:
@@ -57,4 +96,12 @@ def main():
         input("按Enter键退出...")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+    finally:
+        if sys.platform == "win32":
+            print("\n程序执行完毕，按任意键退出...")
+            os.system("pause >nul")
