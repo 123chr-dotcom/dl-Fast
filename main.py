@@ -72,8 +72,11 @@ def main():
                 elif cmd == "wx.exe-win-x32":
                     url = DOWNLOAD_URLS['x32']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatSetup_x86.exe')
+                elif cmd == "wx-input.exe-win":
+                    url = DOWNLOAD_URLS['input']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatInput.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, exit")
                     continue
                     
                 try:
