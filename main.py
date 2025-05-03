@@ -84,8 +84,35 @@ def main():
                 elif cmd == "qq.exe-win-old":
                     url = DOWNLOAD_URLS['qq_old']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ9.7.23.29406.exe')
+                elif cmd == "everything_setup.exe-win-x86":
+                    url = DOWNLOAD_URLS['everything_x86']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86-Setup.exe')
+                elif cmd == "everything_setup.exe-win-x64":
+                    url = DOWNLOAD_URLS['everything_x64']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64-Setup.exe')
+                elif cmd == "everything_Lite_setup.exe-win-x86":
+                    url = DOWNLOAD_URLS['everything_lite_x86']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.Lite-Setup.exe')
+                elif cmd == "everything_Lite_setup.exe-win-x64":
+                    url = DOWNLOAD_URLS['everything_lite_x64']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.Lite-Setup.exe')
+                elif cmd == "everything_setup.msi-win-x86":
+                    url = DOWNLOAD_URLS['everything_msi_x86']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.msi')
+                elif cmd == "everything_setup.msi-win-x64":
+                    url = DOWNLOAD_URLS['everything_msi_x64']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.msi')
+                elif cmd == "everything_Lite_setup.msi-win-x86":
+                    url = DOWNLOAD_URLS['everything_lite_msi_x86']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.Lite.msi')
+                elif cmd == "everything_Lite_setup.msi-win-x64":
+                    url = DOWNLOAD_URLS['everything_lite_msi_x64']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.Lite.msi')
+                elif cmd == "pan.baidu.exe-win":
+                    url = DOWNLOAD_URLS['baidu_netdisk']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduNetdisk_7.55.1.101.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, exit")
                     continue
                     
                 try:
