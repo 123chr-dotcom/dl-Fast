@@ -111,8 +111,14 @@ def main():
                 elif cmd == "pan.baidu.exe-win":
                     url = DOWNLOAD_URLS['baidu_netdisk']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduNetdisk_7.55.1.101.exe')
+                elif cmd == "kuake.pan.exe-win":
+                    url = DOWNLOAD_URLS['quark_pan']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QuarkPC_V4.0.0.316.exe')
+                elif cmd == "kuake.exe-win":
+                    url = DOWNLOAD_URLS['quark_browser']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QuarkPC_V2.6.5.320.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, exit")
                     continue
                     
                 try:
