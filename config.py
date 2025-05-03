@@ -28,5 +28,7 @@ DOWNLOAD_URLS = {
     'baidu_pan_enterprise': 'https://d8caa5-1956185611.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.55.1.101.exe',
     'baidu_fanyi': 'https://fanyiapp.cdn.bcebos.com/fanyi-client/pkg/win/2.0.0/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91_Setup_2.0.0.exe',
     'baidu_input': 'https://imeres.baidu.com/imeres/imeres/ime-res/guanwang/dl/online/BaiduPinyinSetup_6.1.13.6.exe',
-    'baidu_input_five': 'https://speedxbu.baidu.com/shurufa/ime/setup/BaiduWubiSetup_1.2.0.67.exe'
+    'baidu_input_five': 'https://speedxbu.baidu.com/shurufa/ime/setup/BaiduWubiSetup_1.2.0.67.exe',
+    '360safe': 'https://dl.360safe.com/inst.exe',
+    '360safe_fast': 'https://down.360safe.com/setupbeta_jisu.exe'
 }

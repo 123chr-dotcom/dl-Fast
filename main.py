@@ -66,83 +66,44 @@ def main():
                     
                 cmd = command[3:]  # 去掉'dl '前缀
                 
-                if cmd == "wx.exe-win-x64":
-                    url = DOWNLOAD_URLS['x64']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatSetup.exe')
-                elif cmd == "wx.exe-win-x32":
-                    url = DOWNLOAD_URLS['x32']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatSetup_x86.exe')
-                elif cmd == "wx-input.exe-win":
-                    url = DOWNLOAD_URLS['input']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'WeChatInput.exe')
-                elif cmd == "qq.exe-win-x32":
-                    url = DOWNLOAD_URLS['qq_x32']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ_9.9.19_250429_x86_01.exe')
-                elif cmd == "qq.exe-win-arm":
-                    url = DOWNLOAD_URLS['qq_arm']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ_9.9.19_250429_arm64_01.exe')
-                elif cmd == "qq.exe-win-old":
-                    url = DOWNLOAD_URLS['qq_old']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QQ9.7.23.29406.exe')
-                elif cmd == "everything_setup.exe-win-x86":
-                    url = DOWNLOAD_URLS['everything_x86']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86-Setup.exe')
-                elif cmd == "everything_setup.exe-win-x64":
-                    url = DOWNLOAD_URLS['everything_x64']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64-Setup.exe')
-                elif cmd == "everything_Lite_setup.exe-win-x86":
-                    url = DOWNLOAD_URLS['everything_lite_x86']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.Lite-Setup.exe')
-                elif cmd == "everything_Lite_setup.exe-win-x64":
-                    url = DOWNLOAD_URLS['everything_lite_x64']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.Lite-Setup.exe')
-                elif cmd == "everything_setup.msi-win-x86":
-                    url = DOWNLOAD_URLS['everything_msi_x86']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.msi')
-                elif cmd == "everything_setup.msi-win-x64":
-                    url = DOWNLOAD_URLS['everything_msi_x64']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.msi')
-                elif cmd == "everything_Lite_setup.msi-win-x86":
-                    url = DOWNLOAD_URLS['everything_lite_msi_x86']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x86.Lite.msi')
-                elif cmd == "everything_Lite_setup.msi-win-x64":
-                    url = DOWNLOAD_URLS['everything_lite_msi_x64']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'Everything-1.4.1.1026.x64.Lite.msi')
-                elif cmd == "pan.baidu.exe-win":
-                    url = DOWNLOAD_URLS['baidu_netdisk']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduNetdisk_7.55.1.101.exe')
-                elif cmd == "kuake.pan.exe-win":
-                    url = DOWNLOAD_URLS['quark_pan']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QuarkPC_V4.0.0.316.exe')
-                elif cmd == "kuake.exe-win":
-                    url = DOWNLOAD_URLS['quark_browser']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'QuarkPC_V2.6.5.320.exe')
-                elif cmd == "thunder.pan.exe-win":
-                    url = DOWNLOAD_URLS['thunder']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XunLeiWebSetup12.1.6.2780gw.exe')
-                elif cmd == "thunder.video.new.exe-win-x64":
-                    url = DOWNLOAD_URLS['thunder_video_new']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XMPSetup7.0.3.92xmpgw.exe')
-                elif cmd == "thunder.video.old.exe-win-x86":
-                    url = DOWNLOAD_URLS['thunder_video_old']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XMPSetup6.2.6.622xmpgw.exe')
-                elif cmd == "ali.pan.exe-win":
-                    url = DOWNLOAD_URLS['ali_pan']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'aDrive-6.8.6.exe')
-                elif cmd == "baidu.pan.enterprise.exe-win":
-                    url = DOWNLOAD_URLS['baidu_pan_enterprise']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduNetdisk_7.55.1.101.exe')
-                elif cmd == "baidu.fanyi.exe-win":
-                    url = DOWNLOAD_URLS['baidu_fanyi']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', '百度翻译_Setup_2.0.0.exe')
-                elif cmd == "baidu.input.exe-win":
-                    url = DOWNLOAD_URLS['baidu_input']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduPinyinSetup_2.0.0.exe')
-                elif cmd == "baidu.input.five.exe-win":
-                    url = DOWNLOAD_URLS['baidu_input_five']
-                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduWubiSetup_1.2.0.67.exe')
+                # 命令映射字典
+                command_map = {
+                    "wx.exe-win-x64": ('x64', 'WeChatSetup.exe'),
+                    "wx.exe-win-x32": ('x32', 'WeChatSetup_x86.exe'),
+                    "wx-input.exe-win": ('input', 'WeChatInput.exe'),
+                    "qq.exe-win-x32": ('qq_x32', 'QQ_9.9.19_250429_x86_01.exe'),
+                    "qq.exe-win-arm": ('qq_arm', 'QQ_9.9.19_250429_arm64_01.exe'),
+                    "qq.exe-win-old": ('qq_old', 'QQ9.7.23.29406.exe'),
+                    "everything_setup.exe-win-x86": ('everything_x86', 'Everything-1.4.1.1026.x86-Setup.exe'),
+                    "everything_setup.exe-win-x64": ('everything_x64', 'Everything-1.4.1.1026.x64-Setup.exe'),
+                    "everything_Lite_setup.exe-win-x86": ('everything_lite_x86', 'Everything-1.4.1.1026.x86.Lite-Setup.exe'),
+                    "everything_Lite_setup.exe-win-x64": ('everything_lite_x64', 'Everything-1.4.1.1026.x64.Lite-Setup.exe'),
+                    "everything_setup.msi-win-x86": ('everything_msi_x86', 'Everything-1.4.1.1026.x86.msi'),
+                    "everything_setup.msi-win-x64": ('everything_msi_x64', 'Everything-1.4.1.1026.x64.msi'),
+                    "everything_Lite_setup.msi-win-x86": ('everything_lite_msi_x86', 'Everything-1.4.1.1026.x86.Lite.msi'),
+                    "everything_Lite_setup.msi-win-x64": ('everything_lite_msi_x64', 'Everything-1.4.1.1026.x64.Lite.msi'),
+                    "pan.baidu.exe-win": ('baidu_netdisk', 'BaiduNetdisk_7.55.1.101.exe'),
+                    "kuake.pan.exe-win": ('quark_pan', 'QuarkPC_V4.0.0.316.exe'),
+                    "kuake.exe-win": ('quark_browser', 'QuarkPC_V2.6.5.320.exe'),
+                    "thunder.pan.exe-win": ('thunder', 'XunLeiWebSetup12.1.6.2780gw.exe'),
+                    "thunder.video.new.exe-win-x64": ('thunder_video_new', 'XMPSetup7.0.3.92xmpgw.exe'),
+                    "thunder.video.old.exe-win-x86": ('thunder_video_old', 'XMPSetup6.2.6.622xmpgw.exe'),
+                    "ali.pan.exe-win": ('ali_pan', 'aDrive-6.8.6.exe'),
+                    "baidu.pan.enterprise.exe-win": ('baidu_pan_enterprise', 'BaiduNetdisk_7.55.1.101.exe'),
+                    "baidu.fanyi.exe-win": ('baidu_fanyi', '百度翻译_Setup_2.0.0.exe'),
+                    "baidu.input.exe-win": ('baidu_input', 'BaiduPinyinSetup_2.0.0.exe'),
+                    "baidu.input.f five.exe-win": ('baidu_input_five', 'BaiduWubiSetup_1.2.0.67.exe'),
+                    "360safe.exe-win": ('360safe', 'inst.exe'),
+                    "360safe.fast.exe-win": ('360safe_fast', 'setupbeta_jisu.exe')
+                }
+
+                if cmd in command_map:
+                    url_key, filename = command_map[cmd]
+                    url = DOWNLOAD_URLS[url_key]
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', filename)
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, dl thunder.pan.exe-win, dl thunder.video.new.exe-win-x64, dl thunder.video.old.exe-win-x86, dl ali.pan.exe-win, dl baidu.pan.enterprise.exe-win, dl baidu.fanyi.exe-win, dl baidu.input.exe-win, dl baidu.input.five.exe-win, exit")
+                    available_commands = ", ".join(f"dl {cmd}" for cmd in command_map.keys())
+                    print(f"无效命令，可用命令: {available_commands}, exit")
                     continue
                     
                 try:
