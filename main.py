@@ -94,7 +94,13 @@ def main():
                     "baidu.input.exe-win": ('baidu_input', 'BaiduPinyinSetup_2.0.0.exe'),
                     "baidu.input.f five.exe-win": ('baidu_input_five', 'BaiduWubiSetup_1.2.0.67.exe'),
                     "360safe.exe-win": ('360safe', 'inst.exe'),
-                    "360safe.fast.exe-win": ('360safe_fast', 'setupbeta_jisu.exe')
+                    "360safe.fast.exe-win": ('360safe_fast', 'setupbeta_jisu.exe'),
+                    "360.shadu.exe-win": ('360_shadu', '360sd_x64_std_7.0.0.1060C.exe'),
+                    "360.docprot.exe-win": ('360_docprot', 'dpsetup.exe'),
+                    "360se.exe-win": ('360_se', '360se_setup.exe'),
+                    "360pic.exe-win": ('360_pic', 'pic360Setup.exe'),
+                    "360zip.exe-win": ('360_zip', '360zip_setup.exe'),
+                    "360DrvMgrInstaller.exe-win": ('360_drvmgr', '360DrvMgrInstaller_beta.exe')
                 }
 
                 if cmd in command_map:

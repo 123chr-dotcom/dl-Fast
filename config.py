@@ -30,5 +30,11 @@ DOWNLOAD_URLS = {
     'baidu_input': 'https://imeres.baidu.com/imeres/imeres/ime-res/guanwang/dl/online/BaiduPinyinSetup_6.1.13.6.exe',
     'baidu_input_five': 'https://speedxbu.baidu.com/shurufa/ime/setup/BaiduWubiSetup_1.2.0.67.exe',
     '360safe': 'https://dl.360safe.com/inst.exe',
-    '360safe_fast': 'https://down.360safe.com/setupbeta_jisu.exe'
+    '360safe_fast': 'https://down.360safe.com/setupbeta_jisu.exe',
+    '360_shadu': 'https://wsdl.360safe.com/360sd/360sd_x64_std_7.0.0.1060C.exe',
+    '360_docprot': 'https://down.360safe.com/docprot/dpsetup.exe',
+    '360_se': 'https://dl.360safe.com/se/360se_setup.exe',
+    '360_pic': 'https://down.360safe.com/pic360/pic360Setup.exe',
+    '360_zip': 'https://sfdl.360safe.com/360zip_setup.exe',
+    '360_drvmgr': 'https://dl.360safe.com/drvmgr/jituan__360DrvMgrInstaller_beta.exe'
 }
