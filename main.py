@@ -126,8 +126,23 @@ def main():
                 elif cmd == "thunder.video.old.exe-win-x86":
                     url = DOWNLOAD_URLS['thunder_video_old']
                     output = os.path.join(os.path.expanduser('~'), 'Downloads', 'XMPSetup6.2.6.622xmpgw.exe')
+                elif cmd == "ali.pan.exe-win":
+                    url = DOWNLOAD_URLS['ali_pan']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'aDrive-6.8.6.exe')
+                elif cmd == "baidu.pan.enterprise.exe-win":
+                    url = DOWNLOAD_URLS['baidu_pan_enterprise']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduNetdisk_7.55.1.101.exe')
+                elif cmd == "baidu.fanyi.exe-win":
+                    url = DOWNLOAD_URLS['baidu_fanyi']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', '百度翻译_Setup_2.0.0.exe')
+                elif cmd == "baidu.input.exe-win":
+                    url = DOWNLOAD_URLS['baidu_input']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduPinyinSetup_2.0.0.exe')
+                elif cmd == "baidu.input.five.exe-win":
+                    url = DOWNLOAD_URLS['baidu_input_five']
+                    output = os.path.join(os.path.expanduser('~'), 'Downloads', 'BaiduWubiSetup_1.2.0.67.exe')
                 else:
-                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, dl thunder.pan.exe-win, dl thunder.video.new.exe-win-x64, dl thunder.video.old.exe-win-x86, exit")
+                    print("无效命令，可用命令: dl wx.exe-win-x64, dl wx.exe-win-x32, dl wx-input.exe-win, dl qq.exe-win-x32, dl qq.exe-win-arm, dl qq.exe-win-old, dl everything_setup.exe-win-x86, dl everything_setup.exe-win-x64, dl everything_Lite_setup.exe-win-x86, dl everything_Lite_setup.exe-win-x64, dl everything_setup.msi-win-x86, dl everything_setup.msi-win-x64, dl everything_Lite_setup.msi-win-x86, dl everything_Lite_setup.msi-win-x64, dl pan.baidu.exe-win, dl kuake.pan.exe-win, dl kuake.exe-win, dl thunder.pan.exe-win, dl thunder.video.new.exe-win-x64, dl thunder.video.old.exe-win-x86, dl ali.pan.exe-win, dl baidu.pan.enterprise.exe-win, dl baidu.fanyi.exe-win, dl baidu.input.exe-win, dl baidu.input.five.exe-win, exit")
                     continue
                     
                 try:

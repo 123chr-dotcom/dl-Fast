@@ -23,5 +23,10 @@ DOWNLOAD_URLS = {
     'quark_browser': 'https://umcdn.quark.cn/download/37212/quarkpc/pcquark@homepage_oficial/QuarkPC_V2.6.5.320_pc_pf30002_(zh-cn)_release_(Build2176623-250429144044-x64).exe',
     'thunder': 'https://down.sandai.net/thunder11/XunLeiWebSetup12.1.6.2780gw.exe',
     'thunder_video_new': 'https://xmp.down.sandai.net/xmp/XMPSetup7.0.3.92xmpgw.exe',
-    'thunder_video_old': 'https://xmp.down.sandai.net/xmp/XMPSetup6.2.6.622xmpgw.exe'
+    'thunder_video_old': 'https://xmp.down.sandai.net/xmp/XMPSetup6.2.6.622xmpgw.exe',
+    'ali_pan': 'https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-6.8.6.exe?spm=aliyundrive.index.0.0.7db16f60Sdap5C&amp;file=aDrive-6.8.6.exe',
+    'baidu_pan_enterprise': 'https://d8caa5-1956185611.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.55.1.101.exe',
+    'baidu_fanyi': 'https://fanyiapp.cdn.bcebos.com/fanyi-client/pkg/win/2.0.0/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91_Setup_2.0.0.exe',
+    'baidu_input': 'https://imeres.baidu.com/imeres/imeres/ime-res/guanwang/dl/online/BaiduPinyinSetup_6.1.13.6.exe',
+    'baidu_input_five': 'https://speedxbu.baidu.com/shurufa/ime/setup/BaiduWubiSetup_1.2.0.67.exe'
 }
