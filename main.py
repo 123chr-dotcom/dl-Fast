@@ -115,6 +115,8 @@ def main():
                     "7-zip.exe-win-x64": ('7-zip_x64', '7-zip_setup_x64.exe'),
                     "7-zip.exe-win-x86": ('7-zip_x86', '7-zip_setup_x86.exe'),
                     "7-zip.exe-win-arm64": ('7-zip_arm64', '7z2409_arm64.exe'),
+                    "geek.exe.zip-win": ('geek_zip', 'geek.zip'),
+                    "geek.exe.7z-win": ('geek_7z', 'geek.7z'),
                 }
 
                 if cmd in command_map:
