@@ -111,7 +111,10 @@ def main():
                     "360CleanPro.exe-win": ('360_cleanpro', 'SysCleanProSetup_swzs.exe'),
                     "360yun.exe-win": ('360_yun', '360eyun_setup_4.0.1.1370.exe'),
                     "QuickMediaEditor.exe-win": ('360_quickmedia', 'QuickMediaEditor_domain.exe'),
-                    "360hb.exe-win": ('360_hb', '360hb4.0.414.0__1003__.exe')
+                    "360hb.exe-win": ('360_hb', '360hb4.0.414.0__1003__.exe'),
+                    "7-zip.exe-win-x64": ('7-zip_x64', '7-zip_setup_x64.exe'),
+                    "7-zip.exe-win-x86": ('7-zip_x86', '7-zip_setup_x86.exe'),
+                    "7-zip.exe-win-arm64": ('7-zip_arm64', '7z2409_arm64.exe'),
                 }
 
                 if cmd in command_map:

@@ -47,5 +47,8 @@ DOWNLOAD_URLS = {
     '360_cleanpro': 'https://sfdw.360safe.com/CleanPro/SysCleanProSetup_swzs.exe',
     '360_yun': 'https://down.360safe.com/360eyun/360eyun_setup_4.0.1.1370.exe',
     '360_quickmedia': 'https://down.360safe.com/se/QuickMediaEditor_domain.exe',
-    '360_hb': 'https://sedl.360tpcdn.com/se/360hb4.0.414.0__1003__.exe'
+    '360_hb': 'https://sedl.360tpcdn.com/se/360hb4.0.414.0__1003__.exe',
+    '7-zip_arm64':'https://www.7-zip.org/a/7z2409-arm64.exe',
+    '7-zip_x86':'https://objects.githubusercontent.com/github-production-release-asset-2e65be/466446150/9265fc8b-f50a-44fc-b124-109f42bd848a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250504%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250504T005807Z&X-Amz-Expires=300&X-Amz-Signature=68c281fa045007d797eb7c3c9b28bf649676b4fa322286dcc5f1058b80238066&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D7z2409.exe&response-content-type=application%2Foctet-stream',
+    '7-zip_x64':'https://objects.githubusercontent.com/github-production-release-asset-2e65be/466446150/1645817e-3677-4207-93ff-e62de7e147be?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250504%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250504T005225Z&X-Amz-Expires=300&X-Amz-Signature=4b8f00add36df91ef5a2400751cd15b67640e531020404fccf43d811b6d0beb8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D7z2409-x64.exe&response-content-type=application%2Foctet-stream',
 }
