@@ -46,6 +46,59 @@ def main():
             
         logging.info("初始化完成，准备进入主循环")
         
+        # 命令映射字典
+        command_map = {
+            "wx.exe-win-x64": ('x64', 'WeChatSetup.exe'),
+            "wx.exe-win-x32": ('x32', 'WeChatSetup_x86.exe'),
+            "wx-input.exe-win": ('input', 'WeChatInput.exe'),
+            "qq.exe-win-x32": ('qq_x32', 'QQ_9.9.19_250429_x86_01.exe'),
+            "qq.exe-win-arm": ('qq_arm', 'QQ_9.9.19_250429_arm64_01.exe'),
+            "qq.exe-win-old": ('qq_old', 'QQ9.7.23.29406.exe'),
+            "everything_setup.exe-win-x86": ('everything_x86', 'Everything-1.4.1.1026.x86-Setup.exe'),
+            "everything_setup.exe-win-x64": ('everything_x64', 'Everything-1.4.1.1026.x64-Setup.exe'),
+            "everything_Lite_setup.exe-win-x86": ('everything_lite_x86', 'Everything-1.4.1.1026.x86.Lite-Setup.exe'),
+            "everything_Lite_setup.exe-win-x64": ('everything_lite_x64', 'Everything-1.4.1.1026.x64.Lite-Setup.exe'),
+            "everything_setup.msi-win-x86": ('everything_msi_x86', 'Everything-1.4.1.1026.x86.msi'),
+            "everything_setup.msi-win-x64": ('everything_msi_x64', 'Everything-1.4.1.1026.x64.msi'),
+            "everything_Lite_setup.msi-win-x86": ('everything_lite_msi_x86', 'Everything-1.4.1.1026.x86.Lite.msi'),
+            "everything_Lite_setup.msi-win-x64": ('everything_lite_msi_x64', 'Everything-1.4.1.1026.x64.Lite.msi'),
+            "pan.baidu.exe-win": ('baidu_netdisk', 'BaiduNetdisk_7.55.1.101.exe'),
+            "kuake.pan.exe-win": ('quark_pan', 'QuarkPC_V4.0.0.316.exe'),
+            "kuake.exe-win": ('quark_browser', 'QuarkPC_V2.6.5.320.exe'),
+            "thunder.pan.exe-win": ('thunder', 'XunLeiWebSetup12.1.6.2780gw.exe'),
+            "thunder.video.new.exe-win-x64": ('thunder_video_new', 'XMPSetup7.0.3.92xmpgw.exe'),
+            "thunder.video.old.exe-win-x86": ('thunder_video_old', 'XMPSetup6.2.6.622xmpgw.exe'),
+            "ali.pan.exe-win": ('ali_pan', 'aDrive-6.8.6.exe'),
+            "baidu.pan.enterprise.exe-win": ('baidu_pan_enterprise', 'BaiduNetdisk_7.55.1.101.exe'),
+            "baidu.fanyi.exe-win": ('baidu_fanyi', '百度翻译_Setup_2.0.0.exe'),
+            "baidu.input.exe-win": ('baidu_input', 'BaiduPinyinSetup_2.0.0.exe'),
+            "baidu.input.f five.exe-win": ('baidu_input_five', 'BaiduWubiSetup_1.2.0.67.exe'),
+            "360safe.exe-win": ('360safe', 'inst.exe'),
+            "360safe.fast.exe-win": ('360safe_fast', 'setupbeta_jisu.exe'),
+            "360.shadu.exe-win": ('360_shadu', '360sd_x64_std_7.0.0.1060C.exe'),
+            "360.docprot.exe-win": ('360_docprot', 'dpsetup.exe'),
+            "360se.exe-win": ('360_se', '360se_setup.exe'),
+            "360pic.exe-win": ('360_pic', 'pic360Setup.exe'),
+            "360zip.exe-win": ('360_zip', '360zip_setup.exe'),
+            "360DrvMgrInstaller.exe-win": ('360_drvmgr', '360DrvMgrInstaller_beta.exe'),
+            "360DesktopLite.exe-win": ('360_desktop_lite', '360DesktopLite_zm000001.exe'),
+            "360suda.exe-win": ('360_suda', 'SudaSetup.exe'),
+            "360game.exe-win": ('360_game', '360game_setup.exe'),
+            "360safebox.exe-win": ('360_safebox', 'Safebox_setup_6.0.0.1090.exe'),
+            "360suda.caplayer.exe-win": ('360_suda_caplayer', 'SudaCaplayerSetup_360gw.exe'),
+            "360c0mpkill.exe-win": ('360_compkill', '360c0mpkill_5.1.64.1284-0423.zip'),
+            "360DiskPart.exe-win": ('360_diskpart', 'DiskPartSetup_360gwxz.exe'),
+            "360CleanPro.exe-win": ('360_cleanpro', 'SysCleanProSetup_swzs.exe'),
+            "360yun.exe-win": ('360_yun', '360eyun_setup_4.0.1.1370.exe'),
+            "QuickMediaEditor.exe-win": ('360_quickmedia', 'QuickMediaEditor_domain.exe'),
+            "360hb.exe-win": ('360_hb', '360hb4.0.414.0__1003__.exe'),
+            "7-zip.exe-win-x64": ('7-zip_x64', '7-zip_setup_x64.exe'),
+            "7-zip.exe-win-x86": ('7-zip_x86', '7-zip_setup_x86.exe'),
+            "7-zip.exe-win-arm64": ('7-zip_arm64', '7z2409_arm64.exe'),
+            "geek.exe.zip-win": ('geek_zip', 'geek.zip'),
+            "geek.exe.7z-win": ('geek_7z', 'geek.7z'),
+        }
+        
         # 添加启动暂停
         if sys.platform == "win32":
             os.system("title dlFast 下载工具")
@@ -66,58 +119,29 @@ def main():
                     
                 cmd = command[3:]  # 去掉'dl '前缀
                 
-                # 命令映射字典
-                command_map = {
-                    "wx.exe-win-x64": ('x64', 'WeChatSetup.exe'),
-                    "wx.exe-win-x32": ('x32', 'WeChatSetup_x86.exe'),
-                    "wx-input.exe-win": ('input', 'WeChatInput.exe'),
-                    "qq.exe-win-x32": ('qq_x32', 'QQ_9.9.19_250429_x86_01.exe'),
-                    "qq.exe-win-arm": ('qq_arm', 'QQ_9.9.19_250429_arm64_01.exe'),
-                    "qq.exe-win-old": ('qq_old', 'QQ9.7.23.29406.exe'),
-                    "everything_setup.exe-win-x86": ('everything_x86', 'Everything-1.4.1.1026.x86-Setup.exe'),
-                    "everything_setup.exe-win-x64": ('everything_x64', 'Everything-1.4.1.1026.x64-Setup.exe'),
-                    "everything_Lite_setup.exe-win-x86": ('everything_lite_x86', 'Everything-1.4.1.1026.x86.Lite-Setup.exe'),
-                    "everything_Lite_setup.exe-win-x64": ('everything_lite_x64', 'Everything-1.4.1.1026.x64.Lite-Setup.exe'),
-                    "everything_setup.msi-win-x86": ('everything_msi_x86', 'Everything-1.4.1.1026.x86.msi'),
-                    "everything_setup.msi-win-x64": ('everything_msi_x64', 'Everything-1.4.1.1026.x64.msi'),
-                    "everything_Lite_setup.msi-win-x86": ('everything_lite_msi_x86', 'Everything-1.4.1.1026.x86.Lite.msi'),
-                    "everything_Lite_setup.msi-win-x64": ('everything_lite_msi_x64', 'Everything-1.4.1.1026.x64.Lite.msi'),
-                    "pan.baidu.exe-win": ('baidu_netdisk', 'BaiduNetdisk_7.55.1.101.exe'),
-                    "kuake.pan.exe-win": ('quark_pan', 'QuarkPC_V4.0.0.316.exe'),
-                    "kuake.exe-win": ('quark_browser', 'QuarkPC_V2.6.5.320.exe'),
-                    "thunder.pan.exe-win": ('thunder', 'XunLeiWebSetup12.1.6.2780gw.exe'),
-                    "thunder.video.new.exe-win-x64": ('thunder_video_new', 'XMPSetup7.0.3.92xmpgw.exe'),
-                    "thunder.video.old.exe-win-x86": ('thunder_video_old', 'XMPSetup6.2.6.622xmpgw.exe'),
-                    "ali.pan.exe-win": ('ali_pan', 'aDrive-6.8.6.exe'),
-                    "baidu.pan.enterprise.exe-win": ('baidu_pan_enterprise', 'BaiduNetdisk_7.55.1.101.exe'),
-                    "baidu.fanyi.exe-win": ('baidu_fanyi', '百度翻译_Setup_2.0.0.exe'),
-                    "baidu.input.exe-win": ('baidu_input', 'BaiduPinyinSetup_2.0.0.exe'),
-                    "baidu.input.f five.exe-win": ('baidu_input_five', 'BaiduWubiSetup_1.2.0.67.exe'),
-                    "360safe.exe-win": ('360safe', 'inst.exe'),
-                    "360safe.fast.exe-win": ('360safe_fast', 'setupbeta_jisu.exe'),
-                    "360.shadu.exe-win": ('360_shadu', '360sd_x64_std_7.0.0.1060C.exe'),
-                    "360.docprot.exe-win": ('360_docprot', 'dpsetup.exe'),
-                    "360se.exe-win": ('360_se', '360se_setup.exe'),
-                    "360pic.exe-win": ('360_pic', 'pic360Setup.exe'),
-                    "360zip.exe-win": ('360_zip', '360zip_setup.exe'),
-                    "360DrvMgrInstaller.exe-win": ('360_drvmgr', '360DrvMgrInstaller_beta.exe'),
-                    "360DesktopLite.exe-win": ('360_desktop_lite', '360DesktopLite_zm000001.exe'),
-                    "360suda.exe-win": ('360_suda', 'SudaSetup.exe'),
-                    "360game.exe-win": ('360_game', '360game_setup.exe'),
-                    "360safebox.exe-win": ('360_safebox', 'Safebox_setup_6.0.0.1090.exe'),
-                    "360suda.caplayer.exe-win": ('360_suda_caplayer', 'SudaCaplayerSetup_360gw.exe'),
-                    "360c0mpkill.exe-win": ('360_compkill', '360c0mpkill_5.1.64.1284-0423.zip'),
-                    "360DiskPart.exe-win": ('360_diskpart', 'DiskPartSetup_360gwxz.exe'),
-                    "360CleanPro.exe-win": ('360_cleanpro', 'SysCleanProSetup_swzs.exe'),
-                    "360yun.exe-win": ('360_yun', '360eyun_setup_4.0.1.1370.exe'),
-                    "QuickMediaEditor.exe-win": ('360_quickmedia', 'QuickMediaEditor_domain.exe'),
-                    "360hb.exe-win": ('360_hb', '360hb4.0.414.0__1003__.exe'),
-                    "7-zip.exe-win-x64": ('7-zip_x64', '7-zip_setup_x64.exe'),
-                    "7-zip.exe-win-x86": ('7-zip_x86', '7-zip_setup_x86.exe'),
-                    "7-zip.exe-win-arm64": ('7-zip_arm64', '7z2409_arm64.exe'),
-                    "geek.exe.zip-win": ('geek_zip', 'geek.zip'),
-                    "geek.exe.7z-win": ('geek_7z', 'geek.7z'),
-                }
+                # 处理帮助命令
+                if cmd == "-h" or cmd == "--help":
+                    print("\n可用下载命令:")
+                    
+                    # 自动从command_map生成分类帮助
+                    categories = {}
+                    for cmd_name in command_map.keys():
+                        # 从命令名提取软件名作为分类
+                        software = cmd_name.split('.')[0]
+                        if software not in categories:
+                            categories[software] = []
+                        categories[software].append(cmd_name)
+                    
+                    # 显示分类命令
+                    for software, cmds in categories.items():
+                        print(f"\n{software}相关:")
+                        for cmd_name in cmds:
+                            print(f"  dl {cmd_name}")
+                    
+                    print("\n输入'exit'退出程序")
+                    continue
+                
+
 
                 if cmd in command_map:
                     url_key, filename = command_map[cmd]
